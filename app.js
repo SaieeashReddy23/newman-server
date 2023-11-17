@@ -163,6 +163,8 @@ app.get('/diff', (req, resp) => {
   }
 })
 
-app.listen(3005, () => {
-  console.log('Server is running on port 3005')
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT || 3000, () => {
+  console.log(`Server is running on port ${PORT}`)
 })
